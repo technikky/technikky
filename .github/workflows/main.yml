@@ -15,7 +15,7 @@ jobs:
       
     steps:
       - name: Generate Snake Files
-        uses: Platane/snk@v3
+        uses: technikky/snk@v3
         with:
           github_user_name: technikky
           outputs: |
