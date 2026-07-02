@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: "0 * * * *" # Runs automatically every single hour
   workflow_dispatch: # Allows manual button-clicks to update it instantly
+  push: # regenerate immediately whenever main is updated
+    branches:
+      - main
 
 jobs:
   build:
@@ -15,7 +18,7 @@ jobs:
       
     steps:
       - name: Generate Snake Files
-        uses: technikky/snk@v3
+        uses: Platane/snk/svg-only@v3
         with:
           github_user_name: technikky
           outputs: |
